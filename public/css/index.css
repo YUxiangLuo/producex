@@ -1,7 +1,8 @@
-body {
-    margin: 0;
-}
-
-img {
-    display: block;
+#articles-list {
+    width: 100%;
+    max-width: 50rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 3rem;
 }

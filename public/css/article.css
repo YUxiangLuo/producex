@@ -1,0 +1,7 @@
+.markdown-body{
+    display: block;
+    width: 100%;
+    max-width: 50rem;
+    padding-top: 3rem;
+    padding-left: .5rem;
+}

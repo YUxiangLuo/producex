@@ -5,6 +5,9 @@ const readFile = async (filePath) => {
     return (await pReadFile(filePath)).toString();
 }
 
+const writeFile = util.promisify(fs.writeFile);
+
+
 const fileExist = (filePath) => {
     return new Promise((resolve) => {
         fs.access(filePath, fs.constants.F_OK, (err) => {
@@ -15,7 +18,13 @@ const fileExist = (filePath) => {
     })
 }
 
+const unlink = util.promisify(fs.unlink);
+const rename = util.promisify(fs.rename);
+
 module.exports = {
     readFile,
-    fileExist
+    fileExist,
+    writeFile,
+    unlink,
+    rename
 }

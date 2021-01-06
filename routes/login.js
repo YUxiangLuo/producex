@@ -2,8 +2,8 @@ const fs = require("fs");
 const querystring = require("querystring");
 const crypto = require("crypto");
 const midwares = require("../midwares/midwares");
-const { secret } = require("../config");
-const hash = crypto.createHash('sha256').update(secret).digest('hex');
+const config = require("../config");
+const hash = crypto.createHash('sha256').update(config.secret).digest('hex');
 
 module.exports = async (req, res) => {
     const method = req.method;
@@ -12,7 +12,7 @@ module.exports = async (req, res) => {
     }else if(method==="POST") {
         await midwares.parse_body_midware(req);
         let { username, password } = querystring.parse(req.body);
-        if(username==="yuxiangluo"&&password==="111111") {
+        if(username===config.username&&password===config.password) {
             res.setHeader("Set-Cookie", "authorized=true|"+hash);
             res.setHeader("Cache-Control", "max-age=259200");
             res.statusCode = 301;

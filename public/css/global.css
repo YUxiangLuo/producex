@@ -1,0 +1,48 @@
+html {
+    box-sizing: border-box;
+    font-size: 18px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 3rem 1rem 5rem 1rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    overflow-y: auto;
+}
+
+header {
+    width: 100%;
+    max-width: 50rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+    background-color: whitesmoke;
+    border: 3px dashed black;
+}
+
+a#logo-text {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+a#logo-text:hover {
+    text-decoration: underline;
+}
+
+header img {
+    width: 3rem;
+    height: 3rem;
+}

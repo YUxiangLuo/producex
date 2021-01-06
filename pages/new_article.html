@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEW ARTICLE</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
     <form action="/articles/" method="post">
         <label for="title">Title:</label><br>
         <input type="text" name="title"><br>
-        <label for="markdown-text">Markdown:</label><br>
-        <textarea id="markdown-text" name="markdown-text" cols="100" rows="50"></textarea><br>
-        <textarea id="html-text" name="html-text" style="display: none;"></textarea><br>
+        <label for="path">路径:</label><br>
+        <input type="text" name="path"><span>.html</span><br>
+        <label for="markdowntext">Markdown:</label><br>
+        <textarea id="markdowntext" name="markdowntext" cols="100" rows="50"></textarea><br>
+        <textarea id="htmltext" name="htmltext" style="display: none;"></textarea><br>
         <button type="submit">PUBLISH</button>
     </form>
 
