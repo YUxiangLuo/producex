@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEW ARTICLE</title>
+</head>
+<body>
+    <form action="/articles/" method="post">
+        <label for="title">Title:</label><br>
+        <input type="text" name="title"><br>
+        <label for="markdown-text">Markdown:</label><br>
+        <textarea id="markdown-text" name="markdown-text" cols="100" rows="50"></textarea><br>
+        <textarea id="html-text" name="html-text" style="display: none;"></textarea><br>
+        <button type="submit">PUBLISH</button>
+    </form>
+
+    <script src="/public/js/new_article.js"></script>
+</body>
+</html>
