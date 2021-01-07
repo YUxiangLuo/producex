@@ -1,8 +1,19 @@
 #articles-list {
     width: 100%;
-    max-width: 50rem;
+    max-width: 40rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding-top: 3rem;
+    padding-bottom: 5rem;
+}
+
+@media screen and (max-width: 600px) {
+    #articles-list {
+        padding-left: 1rem;
+    }
+}
+
+#articles-list a {
+    color: white;
 }

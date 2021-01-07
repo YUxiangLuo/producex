@@ -1,6 +1,6 @@
 html {
     box-sizing: border-box;
-    font-size: 18px;
+    font-size: 20px;
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -11,8 +11,9 @@ html {
 
 body {
     margin: 0;
-    padding: 3rem 1rem 5rem 1rem;
-    background-color: white;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: #153d27;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,22 +22,30 @@ body {
     overflow-y: auto;
 }
 
+@media screen and (max-width: 600px) { /* small devices, cascade to normal body css */
+    body {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
 header {
     width: 100%;
-    max-width: 50rem;
+    max-width: 40rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 1rem;
+    padding: .5rem 1rem;
     background-color: whitesmoke;
-    border: 3px dashed black;
+    /* border: 3px dashed black; */
 }
 
 a#logo-text {
+    font-family: 'Goldman', cursive;
     text-decoration: none;
     color: black;
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: 1.6rem;
+    font-weight: 400;
 }
 a#logo-text:hover {
     text-decoration: underline;

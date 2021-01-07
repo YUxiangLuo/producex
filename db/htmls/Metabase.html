@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metabase</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/public/css/markdown.css">
+    <link rel="stylesheet" href="/public/css/global.css">
+    <link rel="stylesheet" href="/public/css/article.css">
+</head>
+<body>
+    <header>
+        <a href="/" id="logo-text"><span>PRODUCE.X</span></a>
+        <img src="/public/image/me.jpg" alt="logo">
+    </header>
+    <div class="markdown-body">
+        <h1 id="metabase">Metabase</h1>
+<p>Metabase is the easy, open source way for everyone in your company to ask questions and learn from data.</p>
+<p><img src="docs/metabase-product-screenshot.png" alt="Metabase Product Screenshot"></p>
+<p><a href="https://github.com/metabase/metabase/releases"><img src="https://img.shields.io/github/release/metabase/metabase.svg?label=latest%20release" alt="Latest Release"></a>
+<a href="https://circleci.com/gh/metabase/metabase"><img src="https://circleci.com/gh/metabase/metabase.svg?style=svg&circle-token=3ccf0aa841028af027f2ac9e8df17ce603e90ef9" alt="Circle CI"></a>
+<a href="https://codecov.io/gh/metabase/metabase"><img src="https://codecov.io/gh/metabase/metabase/branch/master/graph/badge.svg" alt="codecov"></a></p>
+<h1 id="features">Features</h1>
+<ul>
+<li>5 minute <a href="https://metabase.com/docs/latest/setting-up-metabase.html">setup</a> (We&#39;re not kidding)</li>
+<li>Let anyone on your team <a href="https://metabase.com/docs/latest/users-guide/04-asking-questions.html">ask questions</a> without knowing SQL</li>
+<li>Rich beautiful <a href="https://metabase.com/docs/latest/users-guide/06-sharing-answers.html">dashboards</a> with auto refresh and fullscreen</li>
+<li><a href="https://www.metabase.com/docs/latest/users-guide/writing-sql.html">SQL Mode</a> for analysts and data pros</li>
+<li>Create canonical <a href="https://metabase.com/docs/latest/administration-guide/07-segments-and-metrics.html">segments and metrics</a> for your team to use</li>
+<li>Send data to Slack or email on a schedule with <a href="https://metabase.com/docs/latest/users-guide/10-pulses.html">Pulses</a></li>
+<li>View data in Slack anytime with <a href="https://metabase.com/docs/latest/users-guide/11-metabot.html">MetaBot</a></li>
+<li><a href="https://metabase.com/docs/latest/administration-guide/03-metadata-editing.html">Humanize data</a> for your team by renaming, annotating and hiding fields</li>
+<li>See changes in your data with <a href="https://www.metabase.com/docs/latest/users-guide/15-alerts.html">alerts</a></li>
+</ul>
+<p>For more information check out <a href="https://metabase.com/">metabase.com</a></p>
+<h2 id="supported-databases">Supported databases</h2>
+<ul>
+<li>Amazon Redshift</li>
+<li>Druid</li>
+<li>Google Analytics</li>
+<li>Google BigQuery</li>
+<li>H2</li>
+<li>MongoDB</li>
+<li>MySQL</li>
+<li>Oracle</li>
+<li>PostgreSQL</li>
+<li>Presto</li>
+<li>Snowflake</li>
+<li>SparkSQL</li>
+<li>SQL Server</li>
+<li>SQLite</li>
+<li>Vertica</li>
+</ul>
+<p>Don&#39;t see your favorite database? Check the list of <a href="https://www.metabase.com/docs/latest/developers-guide-drivers.html#how-to-use-a-community-built-driver">community supported drivers</a>.</p>
+<h2 id="installation">Installation</h2>
+<p>Metabase can be run just about anywhere so checkout our <a href="https://www.metabase.com/docs/latest/operations-guide/installing-metabase.html">Installation Guides</a> for detailed instructions for various deployments. Here&#39;s the TLDR:</p>
+<h3 id="docker">Docker</h3>
+<p>To run Metabase via Docker, just type</p>
+<pre><code>docker run -d -p 3000:3000 --name metabase metabase/metabase</code></pre>
+<h3 id="jar-file">JAR file</h3>
+<p>To run Metabase via a JAR file, you will need to have a Java Runtime Environment installed on your system.</p>
+<p>We recommend the latest LTS version of JRE from <a href="https://adoptopenjdk.net/releases.html">AdoptOpenJDK</a> with HotSpot JVM and x64 architecture, but other <a href="https://www.metabase.com/docs/latest/operations-guide/java-versions.html">Java versions</a> might work too.</p>
+<p>Go to the <a href="https://metabase.com/start/jar.html">Metabase download page</a> and download the latest release. Place the downloaded JAR file into a newly created directory (as it will create some files when it is run), and run it with the following command:</p>
+<pre><code>java -jar metabase.jar</code></pre>
+<p>Now, open a browser and go to <a href="http://localhost:3000">http://localhost:3000</a> , and you will be asked a set of questions that will set up a user account, and then you can add a database connection. For this to work you will need to get some information about which database you want to connect to, such as the Host Name and Port that it is running on, the Database Name and the User and Password that you will be using.</p>
+<p>Once you have added this connection, you will be taken into the app and you&#39;ll be ready to ask your first question.</p>
+<p>For a more detailed walkthrough, check out our <a href="https://www.metabase.com/docs/latest/getting-started.html">Getting Started</a> guide.</p>
+<h1 id="frequently-asked-questions">Frequently Asked Questions</h1>
+<p>Some questions come up over and over again. Check here first:
+<a href="https://www.metabase.com/docs/latest/faq/start.html">FAQ</a></p>
+<h1 id="security-disclosure">Security Disclosure</h1>
+<p>See <a href="./SECURITY.md">SECURITY.md</a> for details.</p>
+<h1 id="contributing">Contributing</h1>
+<p>To get started with a development installation of the Metabase, follow the instructions at our <a href="https://www.metabase.com/docs/latest/developers-guide.html">Developers Guide</a>.</p>
+<p>Then take a look at our <a href="https://www.metabase.com/docs/latest/contributing.html">Contribution Guide</a> for information about our process and where you can fit in!</p>
+<h1 id="internationalization">Internationalization</h1>
+<p>We want Metabase to be available in as many languages as possible. See which translations are available and help contribute to internationalization using our project over at <a href="https://poeditor.com/join/project/ynjQmwSsGh">POEditor</a>. You can also check out our <a href="https://www.metabase.com/docs/latest/faq/general/what-languages-can-be-used-with-metabase.html">policies on translations</a>.</p>
+<h1 id="extending-and-deep-integrations">Extending and Deep Integrations</h1>
+<p>Metabase also allows you to hit our Query API directly from Javascript to integrate the simple analytics we provide with your own application or third party services to do things like:</p>
+<ul>
+<li>Build moderation interfaces</li>
+<li>Export subsets of your users to third party marketing automation software</li>
+<li>Provide a specialized customer lookup application for the people in your company</li>
+</ul>
+<h1 id="license">License</h1>
+<p>This repository contains the source code for both the Open Source edition of Metabase, released under the AGPL, as well as the commercial edition of Metabase Enterprise, released under the Metabase Commercial Software License. </p>
+<p>See <a href="./LICENSE.txt">LICENSE.txt</a> for details.</p>
+<p>Unless otherwise noted, all files © 2021 Metabase, Inc.</p>
+
+    </div>
+    <script src="/public/js/rem.js"></script>
+</body>
+</html>

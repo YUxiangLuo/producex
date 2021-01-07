@@ -35,7 +35,7 @@ module.exports = async (req, res) => {
                 return;
             }
             const article_temp = await readFile("pages/article.html");
-            htmltext = article_temp.replace("@TITLE@", title).replace("@HTMLTEXT", htmltext);
+            htmltext = article_temp.replace("@TITLE@", title).replace("@HTMLTEXT@", htmltext);
 
             path = encodeURIComponent(path);
             let id = crypto.createHash("sha1").update(title).digest("hex");

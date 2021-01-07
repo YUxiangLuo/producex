@@ -3,6 +3,7 @@ const { readFile } = require("../utils");
 module.exports = async (res) => {
     let html = await readFile("pages/index.html");
     let list = JSON.parse(await readFile("db/list.json"));
+    list.reverse();
 
     let list_html = "";
 
