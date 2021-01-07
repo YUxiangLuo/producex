@@ -1,4 +1,6 @@
 #articles-list {
+    flex: 1;
+    overflow-y: auto;
     width: 100%;
     max-width: 40rem;
     display: flex;
@@ -6,6 +8,8 @@
     align-items: flex-start;
     padding-top: 3rem;
     padding-bottom: 5rem;
+    background-color: white;
+    padding-left: 2rem;
 }
 
 @media screen and (max-width: 600px) {
@@ -15,5 +19,5 @@
 }
 
 #articles-list a {
-    color: white;
+    /* color: black; */
 }

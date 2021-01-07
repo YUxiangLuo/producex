@@ -17,9 +17,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
     width: 100vw;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 @media screen and (max-width: 600px) { /* small devices, cascade to normal body css */
@@ -54,4 +54,5 @@ a#logo-text:hover {
 header img {
     width: 3rem;
     height: 3rem;
+    display: block;
 }
